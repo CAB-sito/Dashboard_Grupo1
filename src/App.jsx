@@ -1,22 +1,24 @@
 /*import { useState } from 'react';*/
-import {Route, Link} from 'react-router-dom';
-import TotalDeCategorias from './components/TotalDeCategorias';
-import TotalDeProductos from './components/TotalDeProductos';
-import TotalDeUsuarios from './components/TotalDeUsuarios';
+import {Route, Routes, Link} from 'react-router-dom';
+import TotalDeCategorias from './components/pages/TotalDeCategorias';
+import TotalDeProductos from './components/pages/TotalDeProductos';
+import TotalDeUsuarios from './components/pages/TotalDeUsuarios';
+import Home from './components/Home'
 import './App.css'
 
 function App() {
   /*const [count, setCount] = useState(0)*/
+ return (
+    <div className="App" >
+  
+<Home />
 
-  return (
-    <div>
-    <Route path='/totalCategorias' component={TotalDeCategorias}></Route>
-    <Route path='/totalUsuarios' component={TotalDeUsuarios}></Route>
-    <Route path='/totalProductos' component={TotalDeProductos}></Route>
+<Routes>
+    <Route path='/totalCategorias' element={<TotalDeCategorias/>}></Route>
+    <Route path='/totalUsuarios' element={<TotalDeUsuarios/>}></Route>
+    <Route path='/totalProductos' element={<TotalDeProductos/>}></Route>
+    </Routes> 
 
-    <Link to="/totalCategorias">Categorias</Link> <br />
-    <Link to="/totalUsuarios">Total de usuarios</Link><br />
-    <Link to="/totalProductos">Total de productos</Link><br />
     </div>
   )
 }
