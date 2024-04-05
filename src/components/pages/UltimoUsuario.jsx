@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 
 
-function TotalDeUsuarios(){
+function UltimoUsuario(){
  
 const [data, setData] = useState([]);
 
@@ -12,13 +12,15 @@ useEffect(()=>{
     .catch((error)=>console.log(error))
 }, []);
 
+
     return(
         <div>
           
-                <h2>Total de Usuarios registrados en Digital Clothes: {data.cont}</h2>
+          <h2>Total de Usuarios registrados en Digital Clothes: {data.users[data.users.length -1].name}</h2>
+               
 
         </div>
     )
 };
 
-export default TotalDeUsuarios
+export default UltimoUsuario
