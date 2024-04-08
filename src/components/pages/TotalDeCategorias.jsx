@@ -7,13 +7,14 @@ const [data, setData] = useState([]);
 useEffect(()=>{
     fetch('http://localhost:3000/api/products')
     .then((response)=> response.json())
-    .then((data)=> setData(data))
+    .then((data)=> setData(Object.values(data.countByCategory)))
     .catch((error)=>console.log(error))
 }, []);
 
+
     return(
         <div>
-        <h2>Total de Categorias en Digital Clothes: </h2> 
+        <h2>Total de Categorias en Digital Clothes: {data.length}</h2> 
         </div>
     )
 

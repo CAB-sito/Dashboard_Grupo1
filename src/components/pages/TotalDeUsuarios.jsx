@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
 
-
 function TotalDeUsuarios(){
  
 const [data, setData] = useState([]);
