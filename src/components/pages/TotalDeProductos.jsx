@@ -19,4 +19,4 @@ useEffect(()=>{
     )
 };
 
-export default TotalDeProductos
+export default TotalDeProductos;
