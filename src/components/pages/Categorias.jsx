@@ -14,7 +14,7 @@ useEffect(()=>{
 
     return(
         <div>
-            <h2>Total de Productos de categoria normal: {data.precio_normal} </h2>
+            <h2>Total de Productos de categoria normal: {data.normal} </h2>
             <h2>Total de Productos de categoria oferta: {data.oferta} </h2> 
         </div>
     )
